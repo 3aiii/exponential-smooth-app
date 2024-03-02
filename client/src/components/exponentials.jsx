@@ -104,9 +104,13 @@ const Exponentials = () => {
                                                     <tr className='odd:bg-white even:bg-slate-50'>
                                                         <td>{index+1}</td>
                                                         <td>{Array_real_data[index]}</td>
-                                                        <td className='text-left'>{
-                                                            `${d} ${index === 0 || index === 1  ? `` : `= ${data[index-1]} + ${alpha} (${Array_real_data[index-1]}-${data[index-1]})` } `
-                                                        }</td>
+                                                        <td className='text-left flex'>
+                                                            <p className='bg-[#51829B] text-white px-[4px] py-[2px] rounded-md'>{`${d}`}</p>
+                                                            &nbsp;
+                                                            {
+                                                                `${index === 0 || index === 1  ? `` : ` = ${data[index-1]} + ${alpha} (${Array_real_data[index-1]}-${data[index-1]})` } `
+                                                            }
+                                                        </td>
                                                     </tr>
                                                 ))
                                             }
